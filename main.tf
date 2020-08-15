@@ -1,5 +1,8 @@
- = "1.38.0"
+provider "azurerm" {
+  version = "1.38.0"
 }
+
+
 
 #create resource group
 resource "azurerm_resource_group" "rg" {
