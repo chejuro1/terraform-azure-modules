@@ -12,7 +12,7 @@ resource "azurerm_resource_group" "rg" {
 
 #Create Storage Account
 module "storage_account" {
-  source    = "github.com/chejuro1/terraform-azure-modules"
+  source    = "https://github.com/chejuro1/terraform-azure-modules"
 
   saname    = "statfdemosa234"
   rgname    = azurerm_resource_group.rg.name
