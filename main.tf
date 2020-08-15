@@ -11,7 +11,7 @@ resource "azurerm_resource_group" "rg" {
 }
 
 #Create Storage Account
-module "storage_account" {
+module "storage_account2" {
   source    = "github.com/chejuro1/terraform-azure-modules"
 
   saname    = "statfdemosa234"
@@ -27,10 +27,12 @@ module "storage_account" {
   rgname    = azurerm_resource_group.rg.name
   location  = azurerm_resource_group.rg.location
 
-
+ }
 resource "azurerm_key_vault_secret" "stasecret" {
   name         = "statfdemosa234-secret"
   value        = module.storage_account.primary_key
   key_vault_id = azurerm_key_vault.kv.id
 
 }
+
+
