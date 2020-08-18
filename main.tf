@@ -12,8 +12,8 @@ resource "azurerm_resource_group" "rg" {
 
 #Create Storage Account
 module "storage_account" {
-  source    = "./modules/storage-account"
-  version   = "0.0.5"
+  source    = "github.com/chejuro1/terraform-azure-modules"
+  version = "0.0.5"
   saname    = "statfdemosa234"
   rgname    = azurerm_resource_group.rg.name
   location  = azurerm_resource_group.rg.location
